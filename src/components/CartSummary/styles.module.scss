@@ -1,0 +1,118 @@
+@import '../../sass/mixins';
+
+.articleSummary {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  width: 50rem;
+  padding: 2rem;
+  position: sticky;
+  top: 10rem;
+
+  @include breakpoint(lg) {
+    width: 35rem;
+  }
+}
+
+.titleSummary {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.bodySummary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .totalProducts {
+    p {
+      font-size: 2rem;
+      text-align: center;
+  
+      span {
+        font-weight: bold;
+        font-size: 2rem;
+        
+      }
+  }
+  
+  }
+}
+
+.totalPrice {
+  p {
+    font-size: 1.7rem;
+    text-align: center;
+
+    span {
+      font-weight: bold;
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.paymentOnPix {
+  background-color: rgba(172, 255, 47, 0.25);
+  color: green;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding-block: 1rem;
+
+  p:nth-child(1) {
+    font-size: 1.2rem;
+
+    span {
+      font-weight: 1.2rem;
+      font-weight: bold;
+    }
+  }
+
+  .pricePix {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  p:nth-child(3) {
+    font-size: 1.4rem;
+
+    span {
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  a {
+    font-size: 1.5rem;
+    color: white;
+    border: unset;
+    width: 90%;
+    margin: auto;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s;
+
+    &:hover {
+      opacity: 75%;
+    }
+
+    &:nth-child(1) {
+      background-color: rgb(255, 101, 0);
+    }
+
+    &:nth-child(2) {
+      background-color: #06b6d4;
+    }
+  }
+}

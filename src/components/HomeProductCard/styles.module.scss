@@ -1,0 +1,83 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.Article {
+  width: 25rem;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  transition: 0.2s;
+
+  &:hover {
+    button {
+      opacity: 100;
+      transition: 0.2s;
+    }
+  }
+
+  @include breakpoint(sm) {
+  }
+}
+
+.ProductImage {
+  width: 100%;
+}
+
+.ProductInfo {
+  height: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      opacity: 100%;
+
+      width: 10.5rem;
+      height: 3rem;
+      background-color: $color-1;
+      color: white;
+      transition: 0.2s;
+
+      border: unset;
+      border-radius: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+
+      svg {
+        font-size: 1.2rem;
+      }
+
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+
+      @include breakpoint(xl) {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.ProductTitle {
+  font-size: 1.5rem;
+  color: black;
+
+  max-height: 5.6rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.ProductPrice {
+  font-size: 2rem;
+  color: $color-1;
+  font-weight: bold;
+}

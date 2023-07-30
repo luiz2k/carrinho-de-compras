@@ -1,0 +1,123 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.Header {
+  background-color: white;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  height: 7.5rem;
+  font-size: 10rem;
+  padding-inline: 2.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  svg {
+    color: $color-2;
+    font-size: 3.5rem;
+  }
+
+  a {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+  }
+}
+
+.H1 {
+  font-size: 2rem;
+  color: $color-2;
+
+  @include breakpoint(sm) {
+    font-size: 3rem;
+  }
+}
+
+.cart {
+  position: relative;
+
+  width: 5rem;
+
+  @include breakpoint(xl) {
+    &:hover {
+      .menu {
+        display: flex;
+      }
+    }
+  }
+
+  svg {
+    font-size: 3rem;
+
+    @include breakpoint(sm) {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.Span {
+  background-color: $color-1;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 100px;
+  width: 2rem;
+  height: 2rem;
+
+  position: absolute;
+  top: -0.3rem;
+  right: -0.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  display: none;
+
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  width: 35rem;
+  background-color: white;
+  position: absolute;
+  right: 0rem;
+
+  & > p {
+    color: $color-2;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  a {
+    background-color: $color-1;
+    color: white;
+    font-size: 1.5rem;
+    border: unset;
+    width: 90%;
+    margin: auto;
+    padding: 1rem;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s;
+
+    &:hover {
+      opacity: 75%;
+    }
+  }
+}

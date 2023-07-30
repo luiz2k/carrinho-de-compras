@@ -1,0 +1,54 @@
+@import '../../sass/variables';
+
+.modalProduct {
+  padding: 0.5rem;
+
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+
+  transition: 0.2s;
+
+  &:hover {
+    background-color: rgba(220, 220, 220, 0.25);
+
+    button {
+      display: block;
+    }
+  }
+}
+
+.modalImage {
+  margin-right: 1rem;
+}
+
+.modalTitleAndRemove {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    font-size: 1.3rem;
+    width: 17rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  button {
+    display: none;
+    color: crimson;
+    font-size: 1.3rem;
+
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+  }
+}
+
+.modalPrice {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: $color-1;
+}

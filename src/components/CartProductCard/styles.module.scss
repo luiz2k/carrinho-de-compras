@@ -1,0 +1,119 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.Article {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  padding: 1rem;
+
+  // width: 50rem;
+  width: 100%;
+
+  position: relative;
+
+  & > svg {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    cursor: pointer;
+
+    @include breakpoint(sm) {
+      top: unset;
+      bottom: 5px;
+      right: 5px;
+    }
+  }
+
+  @include breakpoint(sm) {
+    display: flex;
+  }
+}
+
+.Image {
+  display: block;
+  width: 10rem;
+}
+
+.ProductInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include breakpoint(sm) {
+    margin: 1.5rem;
+  }
+}
+
+.ProductTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+
+  @include breakpoint(sm) {
+    margin-bottom: 0;
+  }
+}
+
+.ProductPriceAndAmount {
+  // width: 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include breakpoint(sm) {
+    width: 30rem;
+  }
+}
+
+.price > p,
+.amount > p {
+  font-size: 1.2rem;
+}
+
+.amount {
+  text-align: center;
+}
+
+.ProductPrice {
+  color: $color-1;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.ProductAmount {
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+
+  p {
+    font-size: 2rem;
+  }
+
+  button {
+    background-color: $color-2;
+    width: 2rem;
+    height: 2rem;
+    border: unset;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+
+    &:hover {
+      opacity: 75%;
+    }
+
+    svg {
+      font-size: 2rem;
+      color: white;
+    }
+  }
+}
