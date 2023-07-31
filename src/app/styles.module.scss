@@ -1,3 +1,5 @@
+@import '../sass/variables';
+
 .homeSection {
   display: flex;
   justify-content: center;
@@ -8,4 +10,10 @@
 
   max-width: 150rem;
   margin: auto;
+}
+
+.main {
+  background-color: $white-1;
+  min-height: calc(100vh - 7.5rem);
+  margin-top: 7.5rem;
 }

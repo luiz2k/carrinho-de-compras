@@ -1,8 +1,10 @@
+import '../sass/reset.scss';
+import s from './styles.module.scss';
+
 import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 
 import ReactQueryProvider from '../reactQuery/ReactQueryProvider';
-
-import '../sass/globalStyle.scss';
 
 import { Inter } from 'next/font/google';
 
@@ -24,7 +26,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <DataContextProvider>
           <ReactQueryProvider>
             <Header />
-            <main>{children}</main>
+            <main className={s.main}>{children}</main>
+            <Footer />
           </ReactQueryProvider>
         </DataContextProvider>
       </body>
