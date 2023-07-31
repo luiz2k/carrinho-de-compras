@@ -6,7 +6,7 @@
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
   height: 7.5rem;
   font-size: 10rem;
-  padding-inline: 2.5rem;
+  padding-inline: 1rem;
 
   display: flex;
   justify-content: space-between;
@@ -28,6 +28,10 @@
     display: flex;
     width: fit-content;
     margin-left: auto;
+  }
+
+  @include breakpoint(sm){
+    padding-inline: 2.5rem;
   }
 }
 
