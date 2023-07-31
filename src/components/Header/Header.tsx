@@ -20,13 +20,13 @@ export default function Header() {
   const routeName = pathname.replace('/', '');
 
   return (
-    <header className={s.Header}>
-      <h1 className={s.H1}>Carrinho de Compras</h1>
+    <header className={s.header}>
+      <h1 className={s.h1}>Carrinho de Compras</h1>
 
       <div className={s.cart}>
         <Link href={'/carrinho'}>
           {cartData.length > 0 && (
-            <span className={s.Span} style={{ display: routeName === 'carrinho' ? 'none' : '' }}>
+            <span className={s.span} style={{ display: routeName === 'carrinho' ? 'none' : '' }}>
               {cartData.length}
             </span>
           )}

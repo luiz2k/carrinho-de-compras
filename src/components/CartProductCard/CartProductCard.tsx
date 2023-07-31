@@ -57,27 +57,27 @@ export default function CartCard({ data }: CartCard) {
   }
 
   return (
-    <article className={s.Article}>
+    <article className={s.article}>
       <div>
-        <img className={s.Image} src={data.thumbnail} alt={data.title} />
+        <img className={s.image} src={data.thumbnail} alt={data.title} />
       </div>
 
-      <div className={s.ProductInfo}>
-        <p className={s.ProductTitle}>{data.title}</p>
+      <div className={s.productInfo}>
+        <p className={s.productTitle}>{data.title}</p>
 
-        <div className={s.ProductPriceAndAmount}>
+        <div className={s.productPriceAndAmount}>
           <div className={s.price}>
             <p>Preço à vista</p>
 
             <div>
-              <p className={s.ProductPrice}>{formatCurrency(data.price * data.amount, 'BRL')}</p>
+              <p className={s.productPrice}>{formatCurrency(data.price * data.amount, 'BRL')}</p>
             </div>
           </div>
 
           <div className={s.amount}>
             <p>Quantidade</p>
 
-            <div className={s.ProductAmount}>
+            <div className={s.productAmount}>
               <button onClick={() => drecrementProduct(data.id, data.amount)}>
                 <MdKeyboardArrowLeft />
               </button>

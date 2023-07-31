@@ -50,18 +50,18 @@ export default function ProductCard({ data }: ProductCard) {
   }
 
   return (
-    <article className={s.Article} title={data.title}>
+    <article className={s.article} title={data.title}>
       <img
-        className={s.ProductImage}
+        className={s.productImage}
         src={data.thumbnail.replace(/\w\.jpg/gi, 'W.jpg')}
         alt={data.title}
       />
 
-      <div className={s.ProductInfo}>
-        <p className={s.ProductTitle}>{data.title}</p>
+      <div className={s.productInfo}>
+        <p className={s.productTitle}>{data.title}</p>
 
         <div>
-          <p className={s.ProductPrice}>{formatCurrency(data.price, 'BRL')}</p>
+          <p className={s.productPrice}>{formatCurrency(data.price, 'BRL')}</p>
           <button onClick={() => handleAddToCartButton(data)}>
             <BsCartPlus /> CARRINHO +
           </button>

@@ -1,7 +1,7 @@
 @import '../../sass/variables';
 @import '../../sass/mixins';
 
-.Article {
+.article {
   width: 25rem;
   padding: 1rem;
   background-color: white;
@@ -19,11 +19,11 @@
   }
 }
 
-.ProductImage {
+.productImage {
   width: 100%;
 }
 
-.ProductInfo {
+.productInfo {
   height: 10rem;
 
   display: flex;
@@ -65,7 +65,7 @@
   }
 }
 
-.ProductTitle {
+.productTitle {
   font-size: 1.5rem;
   color: black;
 
@@ -76,7 +76,7 @@
   -webkit-line-clamp: 3;
 }
 
-.ProductPrice {
+.productPrice {
   font-size: 2rem;
   color: $color-1;
   font-weight: bold;

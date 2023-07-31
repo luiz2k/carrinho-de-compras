@@ -1,7 +1,7 @@
 @import '../../sass/variables';
 @import '../../sass/mixins';
 
-.Article {
+.article {
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.075);
   padding: 1rem;
@@ -31,12 +31,12 @@
   }
 }
 
-.Image {
+.image {
   display: block;
   width: 10rem;
 }
 
-.ProductInfo {
+.productInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,7 +46,7 @@
   }
 }
 
-.ProductTitle {
+.productTitle {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 
@@ -55,7 +55,7 @@
   }
 }
 
-.ProductPriceAndAmount {
+.productPriceAndAmount {
   // width: 30rem;
   display: flex;
   justify-content: space-between;
@@ -75,13 +75,13 @@
   text-align: center;
 }
 
-.ProductPrice {
+.productPrice {
   color: $color-1;
   font-weight: bold;
   font-size: 2rem;
 }
 
-.ProductAmount {
+.productAmount {
   width: 7rem;
   display: flex;
   align-items: center;
