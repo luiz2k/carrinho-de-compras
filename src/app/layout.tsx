@@ -5,14 +5,16 @@ import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 
 import ReactQueryProvider from '../reactQuery/ReactQueryProvider';
+import DataContextProvider from '@/contexts/DataContextProvider';
 
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
+import { Roboto } from 'next/font/google';
 
 import type { Metadata } from 'next';
 
-import DataContextProvider from '@/contexts/DataContextProvider';
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   title: 'Carrinho de Compras',
@@ -22,7 +24,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <DataContextProvider>
           <ReactQueryProvider>
             <Header />
