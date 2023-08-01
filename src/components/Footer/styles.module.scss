@@ -17,6 +17,10 @@
     font-size: 1.7rem;
   }
 
+  strong {
+    white-space: nowrap;
+  }
+
   @include breakpoint(sm) {
     display: grid;
     grid-template-columns: 1fr 1fr;

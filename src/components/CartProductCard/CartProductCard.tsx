@@ -2,7 +2,7 @@ import formatCurrency from '@/utils/formatCurrency';
 import s from './styles.module.scss';
 
 import { GrTrash } from 'react-icons/gr';
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
+import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 
 import { useContext } from 'react';
 import { DataContext } from '@/contexts/DataContextProvider';
@@ -79,11 +79,11 @@ export default function CartCard({ data }: CartCard) {
 
             <div className={s.productAmount}>
               <button onClick={() => drecrementProduct(data.id, data.amount)}>
-                <MdKeyboardArrowLeft />
+                <SlArrowLeft />
               </button>
               <p>{data.amount}</p>
               <button onClick={() => incrementProduct(data.id)}>
-                <MdKeyboardArrowRight />
+                <SlArrowRight />
               </button>
             </div>
           </div>
