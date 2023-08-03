@@ -60,7 +60,13 @@ export default function CartCard({ data }: CartCard) {
   return (
     <article className={s.cartArticle}>
       <div>
-        <Image src={data.thumbnail} alt={data.title} width={100} height={100} priority={true} />
+        <Image
+          src={data.thumbnail.replace('http://', 'https://')}
+          alt={data.title}
+          width={100}
+          height={100}
+          priority={true}
+        />
       </div>
 
       <div className={s.productInfo}>

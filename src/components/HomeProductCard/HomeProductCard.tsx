@@ -53,7 +53,7 @@ export default function ProductCard({ data }: ProductCard) {
   return (
     <article className={s.homeArticle} title={data.title}>
       <Image
-        src={data.thumbnail.replace(/\w\.jpg/gi, 'W.jpg')}
+        src={data.thumbnail.replace('http://', 'https://').replace(/\w\.jpg/gi, 'W.jpg')}
         alt={data.title}
         width={228}
         height={228}
