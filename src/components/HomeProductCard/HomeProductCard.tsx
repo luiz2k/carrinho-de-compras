@@ -5,6 +5,7 @@ import { BsCartPlus } from 'react-icons/bs';
 
 import { useContext } from 'react';
 import { DataContext } from '@/contexts/DataContextProvider';
+import Image from 'next/image';
 
 type ProductCard = {
   data: {
@@ -51,10 +52,12 @@ export default function ProductCard({ data }: ProductCard) {
 
   return (
     <article className={s.homeArticle} title={data.title}>
-      <img
-        className={s.productImage}
+      <Image
         src={data.thumbnail.replace(/\w\.jpg/gi, 'W.jpg')}
         alt={data.title}
+        width={228}
+        height={228}
+        priority={true}
       />
 
       <div className={s.productInfo}>

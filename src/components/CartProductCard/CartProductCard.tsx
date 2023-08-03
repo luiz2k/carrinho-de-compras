@@ -6,6 +6,7 @@ import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 
 import { useContext } from 'react';
 import { DataContext } from '@/contexts/DataContextProvider';
+import Image from 'next/image';
 
 type CartCard = {
   data: {
@@ -59,7 +60,7 @@ export default function CartCard({ data }: CartCard) {
   return (
     <article className={s.cartArticle}>
       <div>
-        <img className={s.image} src={data.thumbnail} alt={data.title} />
+        <Image src={data.thumbnail} alt={data.title} width={100} height={100} priority={true} />
       </div>
 
       <div className={s.productInfo}>
