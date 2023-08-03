@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { DataContext } from '@/contexts/DataContextProvider';
 
 import formatCurrency from '@/utils/formatCurrency';
+import Image from 'next/image';
 
 type CartModal = {
   data: {
@@ -28,7 +29,13 @@ export default function CartModal({ data }: CartModal) {
 
   return (
     <article className={s.modalProduct}>
-      <img src={data.thumbnail} alt={data.title} className={s.modalImage} />
+      <Image
+        src={data.thumbnail.replace('http://', 'https://')}
+        alt={data.title}
+        width={90}
+        height={90}
+        priority={true}
+      />
 
       <div>
         <div className={s.modalTitleAndRemove}>
