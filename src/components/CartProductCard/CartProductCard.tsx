@@ -57,7 +57,7 @@ export default function CartCard({ data }: CartCard) {
   }
 
   return (
-    <article className={s.article}>
+    <article className={s.cartArticle}>
       <div>
         <img className={s.image} src={data.thumbnail} alt={data.title} />
       </div>
