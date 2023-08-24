@@ -4,7 +4,6 @@ import s from './styles.module.scss';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 
-import ReactQueryProvider from '../reactQuery/ReactQueryProvider';
 import DataContextProvider from '@/contexts/DataContextProvider';
 
 import { Roboto } from 'next/font/google';
@@ -26,11 +25,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-br">
       <body className={roboto.className}>
         <DataContextProvider>
-          <ReactQueryProvider>
-            <Header />
-            <main className={s.main}>{children}</main>
-            <Footer />
-          </ReactQueryProvider>
+          <Header />
+          <main className={s.main}>{children}</main>
+          <Footer />
         </DataContextProvider>
       </body>
     </html>

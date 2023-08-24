@@ -1,3 +1,5 @@
+'use client';
+
 import formatCurrency from '@/utils/formatCurrency';
 import s from './styles.module.scss';
 
