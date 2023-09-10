@@ -30,7 +30,7 @@
     margin-left: auto;
   }
 
-  @include breakpoint(sm){
+  @include breakpoint(sm) {
     padding-inline: 2.5rem;
   }
 }
@@ -48,6 +48,34 @@
   position: relative;
 
   width: 5rem;
+
+  .newProductAdded {
+    position: absolute;
+    text-decoration: none;
+    font-size: 1.7rem;
+
+    color: $color-2;
+    font-weight: bold;
+
+    top: -1rem;
+    left: -2rem;
+    
+
+    opacity: 0;
+
+    &.animation{
+      animation: addProduct 0.5s ease;
+
+      @keyframes addProduct {
+        0% {
+          transform: translateY(2rem);
+        }
+        50% {
+          opacity: 100%;
+        }
+      }
+    }
+  }
 
   @include breakpoint(xl) {
     &:hover {

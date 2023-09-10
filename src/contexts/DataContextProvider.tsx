@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useState, ReactNode } from 'react';
+import { createContext, useState, useRef, ReactNode } from 'react';
 
 type cartData = {
   id: string;
@@ -13,6 +13,7 @@ type cartData = {
 type createContext = {
   cartData: cartData[];
   setCartData: React.Dispatch<React.SetStateAction<cartData[]>>;
+  animationSpan: React.MutableRefObject<null | HTMLElement>;
 };
 
 type DataContextProvider = {
@@ -22,10 +23,18 @@ type DataContextProvider = {
 export const DataContext = createContext<createContext>({
   cartData: [],
   setCartData: () => {},
+  animationSpan: {
+    current: null,
+  },
 });
 
 export default function DataContextProvider({ children }: DataContextProvider) {
   const [cartData, setCartData] = useState<cartData[]>([]);
+  const animationSpan = useRef(null);
 
-  return <DataContext.Provider value={{ cartData, setCartData }}>{children}</DataContext.Provider>;
+  return (
+    <DataContext.Provider value={{ cartData, setCartData, animationSpan }}>
+      {children}
+    </DataContext.Provider>
+  );
 }

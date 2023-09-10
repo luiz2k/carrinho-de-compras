@@ -13,7 +13,7 @@ import HeaderCartModal from '../HeaderCartModal/HeaderCartModal';
 import { usePathname } from 'next/navigation';
 
 export default function Header() {
-  const { cartData } = useContext(DataContext);
+  const { cartData, animationSpan } = useContext(DataContext);
   const newCartData = cartData.slice(-3);
 
   const pathname = usePathname();
@@ -30,6 +30,9 @@ export default function Header() {
               {cartData.length}
             </span>
           )}
+          <span ref={animationSpan} className={`${s.newProductAdded}`}>
+            +1
+          </span>
           <TiShoppingCart />
         </Link>
 

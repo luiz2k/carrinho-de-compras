@@ -3,6 +3,8 @@
 import formatCurrency from '@/utils/formatCurrency';
 import s from './styles.module.scss';
 
+import headerStyle from '../Header/styles.module.scss';
+
 import { BsCartPlus } from 'react-icons/bs';
 
 import { useContext } from 'react';
@@ -26,7 +28,15 @@ type handleAddToCartButton = {
 };
 
 export default function ProductCard({ data }: ProductCard) {
-  const { setCartData } = useContext(DataContext);
+  const { setCartData, animationSpan } = useContext(DataContext);
+
+  function addMoreAnimation() {
+    setTimeout(() => {
+      animationSpan.current?.classList.add(headerStyle.animation);
+    }, 0);
+
+    animationSpan.current?.classList.remove(headerStyle.animation);
+  }
 
   function handleAddToCartButton(data: handleAddToCartButton) {
     const { id, title, thumbnail, price } = data;
@@ -39,6 +49,7 @@ export default function ProductCard({ data }: ProductCard) {
       if (prevFilter) {
         const dataCopy = prev.map((product) => {
           if (product.id === id) {
+            addMoreAnimation();
             return { ...product, amount: product.amount + 1 };
           }
 
