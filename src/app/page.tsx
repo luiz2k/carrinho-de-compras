@@ -1,3 +1,5 @@
+import { HomePage } from "@/modules/home";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,10 +7,4 @@ export const metadata: Metadata = {
   description: "",
 };
 
-export default function Home() {
-  return (
-    <>
-      <h1>Home</h1>
-    </>
-  );
-}
+export default HomePage;
