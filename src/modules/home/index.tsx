@@ -12,7 +12,7 @@ export async function HomePage() {
           id={product.id}
           title={product.title}
           description={product.description}
-          image={product.images[1]}
+          image={product.images[0]}
           price={product.price}
         />
       ))}
