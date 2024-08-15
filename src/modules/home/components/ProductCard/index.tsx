@@ -16,9 +16,15 @@ export function ProductCard({
 }: CardProps) {
   const { add } = useProductStore();
 
+  const isLink = (string: string): boolean => {
+    const regex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?$/;
+
+    return regex.test(string);
+  };
+
   return (
     <>
-      {image && (
+      {isLink(image) && (
         <article title={title}>
           <Card className="w-[275px] pt-6">
             <CardContent>
