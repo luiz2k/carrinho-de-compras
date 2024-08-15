@@ -48,10 +48,10 @@ export function ProductCard({
 
               <Button
                 size="sm"
-                className="ml-auto"
+                className="ml-auto uppercase"
                 onClick={() => add({ id, title, description, image, price })}
               >
-                + CARRINHO
+                + Carrinho
               </Button>
             </CardFooter>
           </Card>
