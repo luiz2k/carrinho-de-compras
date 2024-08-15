@@ -14,7 +14,7 @@ export default function Anchor({ children, href, icon }: AnchorProps) {
     <Button
       asChild
       size="sm"
-      variant={isActive ? "default" : "ghost"}
+      variant={isActive ? "default" : "outline"}
       disabled={isActive}
       className="gap-2.5"
     >
