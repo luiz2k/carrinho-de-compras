@@ -1,3 +1,5 @@
+import { CartPage } from "@/modules/cart";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,10 +7,4 @@ export const metadata: Metadata = {
   description: "",
 };
 
-export default function Cart() {
-  return (
-    <>
-      <h1>Card</h1>
-    </>
-  );
-}
+export default CartPage;
