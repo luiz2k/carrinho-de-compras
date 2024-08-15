@@ -51,7 +51,7 @@ export function CartPage() {
         )}
       </section>
 
-      <aside>
+      <aside className="sticky top-[calc(3.563rem+0.625rem)] h-fit">
         <Card className="w-full max-w-md">
           <CardHeader>
             <CardTitle className="uppercase">Resumo</CardTitle>
