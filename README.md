@@ -2,7 +2,7 @@
 
 ![Demonstração do front-end](https://i.imgur.com/ZGeLO62.png)
 
-#### [✈️ VISITAR PROJETO](https://github.com/luiz2k/lista-de-tarefas)
+#### [✈️ VISITAR PROJETO](https://carrinhodecompras-luiz2k.vercel.app/)
 
 ## 📖 Sobre o Projeto
 
