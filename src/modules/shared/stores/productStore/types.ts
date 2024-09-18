@@ -1,5 +1,3 @@
-import { ProductCard } from "@/modules/home/components/ProductCard";
-
 export type Product = {
   id: number;
   title: string;
