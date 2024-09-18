@@ -9,10 +9,12 @@ export type Category = {
 export type Product = {
   id: number;
   title: string;
+  image: string;
   price: number;
   description: string;
-  images: string[];
-  creationAt: string;
-  updatedAt: string;
-  category: Category;
+  brand: string;
+  model: string;
+  color: string;
+  category: string;
+  discount: number;
 };

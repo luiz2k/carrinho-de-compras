@@ -7,7 +7,7 @@ export const getAllProducts = async (): Promise<Product[]> => {
     cache: "force-cache",
   });
 
-  const data = response.json();
+  const data = await response.json();
 
-  return data;
+  return data.products;
 };
