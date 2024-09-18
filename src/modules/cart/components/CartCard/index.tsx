@@ -4,14 +4,7 @@ import { useProductStore } from "@/modules/shared/stores/productStore";
 import { MinusIcon, PlusIcon, TrashIcon } from "lucide-react";
 import Image from "next/image";
 
-export type CartCardProps = {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  price: number;
-  quantity: number;
-};
+import type { CartCardProps } from "./types";
 
 export default function CartCard({
   id,
