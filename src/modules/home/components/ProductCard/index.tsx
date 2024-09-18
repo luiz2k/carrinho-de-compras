@@ -16,47 +16,37 @@ export function ProductCard({
 }: CardProps) {
   const { add } = useProductStore();
 
-  const isLink = (string: string): boolean => {
-    const regex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?$/;
-
-    return regex.test(string);
-  };
-
   return (
-    <>
-      {isLink(image) && (
-        <article title={title}>
-          <Card className="w-[275px] pt-6">
-            <CardContent>
-              <div className="overflow-hidden rounded-lg">
-                <Image
-                  src={image}
-                  alt={title}
-                  width={225}
-                  height={225}
-                  className="mx-auto duration-200 hover:scale-105"
-                />
-              </div>
+    <article title={title}>
+      <Card className="w-[17.188rem] pt-6">
+        <CardContent>
+          <div className="flex h-[14.063rem] items-center justify-center overflow-hidden rounded-lg">
+            <Image
+              src={image}
+              alt={title}
+              width={225}
+              height={225}
+              className="duration-200 hover:scale-105"
+            />
+          </div>
 
-              <CardTitle className="line-clamp-1 pt-2.5 text-base">
-                {title}
-              </CardTitle>
-            </CardContent>
+          <CardTitle className="line-clamp-1 pt-2.5 text-base">
+            {title}
+          </CardTitle>
+        </CardContent>
 
-            <CardFooter>
-              <p>R$ {price}</p>
+        <CardFooter>
+          <span>R$ {price}</span>
 
-              <Button
-                size="sm"
-                className="ml-auto uppercase"
-                onClick={() => add({ id, title, description, image, price })}
-              >
-                + Carrinho
-              </Button>
-            </CardFooter>
-          </Card>
-        </article>
-      )}
-    </>
+          <Button
+            size="sm"
+            className="ml-auto uppercase"
+            onClick={() => add({ id, title, description, image, price })}
+          >
+            + Carrinho
+          </Button>
+        </CardFooter>
+      </Card>
+    </article>
   );
 }
