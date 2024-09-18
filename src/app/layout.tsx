@@ -14,7 +14,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={roboto.className}>
         <Header />
-        <main className="m-auto mt-[calc(3.563rem+2rem)] max-w-7xl p-2.5">
+        <main className="m-auto mb-8 mt-[calc(3.563rem+2rem)] max-w-7xl p-2.5">
           {children}
         </main>
 
