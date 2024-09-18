@@ -26,13 +26,13 @@ export default function CartCard({
   return (
     <article key={id}>
       <Card className="w-full max-w-md pt-6">
-        <CardContent className="grid grid-cols-[80px_1fr_auto] items-center gap-4">
+        <CardContent className="grid grid-cols-[5rem_1fr_auto] items-center gap-4">
           <Image
             src={image}
             alt={title}
             width={80}
             height={80}
-            className="aspect-square rounded-md object-cover"
+            className="rounded-md object-cover"
           />
           <div className="grid gap-1">
             <h3 className="line-clamp-1 font-medium">{title}</h3>
@@ -40,6 +40,7 @@ export default function CartCard({
               {description}
             </p>
           </div>
+
           <div className="grid gap-2.5">
             <div className="flex items-center gap-2">
               <Button
