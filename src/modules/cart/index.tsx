@@ -14,6 +14,7 @@ import CartCard from "./components/CartCard";
 export function CartPage() {
   const { products, reset } = useProductStore();
 
+  // Calcula o valor total dos produtos no carrinho
   const totalPrice = products.reduce(
     (acc, product) => acc + product.price * product.quantity,
     0,
