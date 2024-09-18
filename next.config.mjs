@@ -4,15 +4,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "i.imgur.com",
+        hostname: "storage.googleapis.com",
         port: "",
-        pathname: "/**.jpeg",
-      },
-      {
-        protocol: "https",
-        hostname: "i.imgur.com",
-        port: "",
-        pathname: "/**.jpg",
+        pathname: "/fir-auth-1c3bc.appspot.com/**.jpg",
       },
     ],
   },
